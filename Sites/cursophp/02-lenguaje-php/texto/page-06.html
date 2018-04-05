@@ -1,0 +1,145 @@
+
+<table width='100%'>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          7 / 7        </span>
+        <span class='pagelink'>
+          <a href="page-05.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>[#]</span>
+      </div>
+    </td>
+  </tr>
+  <tr height="99%" valign="top">
+    <td>
+    <!-- BEGIN CONTENTS -->
+
+<a name="h1_8"></a>
+<h1>Ampliando la tienda</h1>
+<p>Vamos a incorporar una tabla informativa con el precio del env&iacute;o en el <tt>formulario.html</tt>. Para que el propio formulario pueda ejecutar c&oacute;digo PHP se deber&aacute; renombrar el fichero como <tt>formulario.php</tt>.</p>
+<p>Los costes de env&iacute;o vienen dados por la siguiente formula en funci&oacute;n de la distancia:</p>
+<ul>
+  <li>De 0 a 10 km: 5 &euro;</li>
+  <li>De 11 a 50 km: 10 &euro;</li>
+  <li>De 51 a 100 km: 20 &euro;</li>
+  <li>De 101 a 1000 km: 20 &euro; + 5 &euro; por cada 100 km. Es decir, de 101 a 200 km -> 25 &euro;, de 201 km a 300 km -> 30 &euro;, ...</li>
+</ul>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>A&ntilde;adir un nuevo campo al formulario <tt>Sites/cursophp/02-lenguaje-php/ficheros/formulario.php</tt> en el que se especif&iacute;que la distancia al punto de entrega.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Tambien se desea mostrar una tabla informativa que deber&aacute; incluir las filas: 0-10, 11-50, 50-100, 101-200, 201-300, .. hasta 100km.  Las primeras filas podr&aacute;n estar fijas (en HTML o mediante la sentencia <tt>echo</tt>), pero las &uacute;ltimas (de 100 a 1000 km) se deber&aacute;n generar mediante un bucle.</p>
+<p>La tabla de precios podr&iacute;a comenzar como se muestra a continuaci&oacute;n:</p>
+<!-- INLINE begin -->
+<table border="1" cellpadding="2">
+<tr bgcolor="#dedede">
+  <td>Distancia (km)</td>
+  <td>Precio (&euro;)</td>
+</tr>
+
+<tr bgcolor="#f0f0f0" align="center">
+  <td>0 - 10</td>
+  <td>5 &euro;</td>
+</tr>
+
+<tr bgcolor="#f0f0f0" align="center">
+  <td>11 - 50</td>
+  <td>10 &euro;</td>
+</tr>
+
+<tr bgcolor="#f0f0f0" align="center">
+  <td>51 - 100</td>
+  <td>20 &euro;</td>
+</tr>
+
+<tr bgcolor="#f0f0f0" align="center">
+  <td>...</td>
+  <td>... &euro;</td>
+</tr>
+
+</table>
+<!-- INLINE end -->
+
+<p>El c&oacute;digo HTML para dicha tabla es el que sigue:</p>
+<pre style='height: 24.0em; overflow: auto' class='source'><font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">table</font> <font color="#2040a0">border=</font><font color="#008000">&quot;1&quot;</font> <font color="#2040a0">cellpadding=</font><font color="#008000">&quot;2&quot;</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">tr</font> <font color="#2040a0">bgcolor=</font><font color="#008000">&quot;#dedede&quot;</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>Distancia (km)<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>Precio (<font color="ff0000">&amp;euro;</font>)<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/tr</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">tr</font> <font color="#2040a0">bgcolor=</font><font color="#008000">&quot;#f0f0f0&quot;</font> <font color="#2040a0">align=</font><font color="#008000">&quot;center&quot;</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>0 - 10<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>5 <font color="ff0000">&amp;euro;</font><font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/tr</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">tr</font> <font color="#2040a0">bgcolor=</font><font color="#008000">&quot;#f0f0f0&quot;</font> <font color="#2040a0">align=</font><font color="#008000">&quot;center&quot;</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>11 - 50<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>10 <font color="ff0000">&amp;euro;</font><font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/tr</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">tr</font> <font color="#2040a0">bgcolor=</font><font color="#008000">&quot;#f0f0f0&quot;</font> <font color="#2040a0">align=</font><font color="#008000">&quot;center&quot;</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>51 - 100<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>20 <font color="ff0000">&amp;euro;</font><font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/tr</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">tr</font> <font color="#2040a0">bgcolor=</font><font color="#008000">&quot;#f0f0f0&quot;</font> <font color="#2040a0">align=</font><font color="#008000">&quot;center&quot;</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>...<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+  <font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>... <font color="ff0000">&amp;euro;</font><font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/td</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/tr</font><font color="4444FF"><strong>&gt;</strong></font></strong></font>
+
+<font color="#2040a0"><strong><font color="4444FF"><strong>&lt;</strong></font><font color="#2040a0">/table</font><font color="4444FF"><strong>&gt;</strong></font></strong></font></pre style='height: 24.0em; overflow: auto'>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Incorporar la tabla informativa con los costes del transporte al fichero <tt>Sites/cursophp/02-lenguaje-php/ficheros/formulario.php</tt>. Se recomienda probar varios tipos de bucles: <tt>while</tt>, <tt>do-while</tt> y <tt>for</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobad que el nuevo campo y la tabla informativa aparece en el formulario: <a href="../../02-lenguaje-php/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Ahora vamos a modificar el script <tt>peticion.php</tt> para que calcule el coste del env&iacute;o. Para el c&aacute;lculo se deber&aacute;n utilizar sentencias <tt>if-elseif-else</tt>, donde se utilizar&aacute;n los valores fijos en los primeros <tt>if</tt> y la formula en el <tt>else</tt> final.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Incorporar el c&aacute;lculo del precio del transporte al fichero <tt>peticion.php</tt>, por separado y en el total.</p>
+     </td>
+  </tr>
+
+</table>
+    <!-- END CONTENTS -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          7 / 7        </span>
+        <span class='pagelink'>
+          <a href="page-05.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>[#]</span>
+      </div>
+    </td>
+  </tr>
+</table>

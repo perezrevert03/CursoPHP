@@ -1,0 +1,118 @@
+
+<table width='100%'>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          5 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-sol-03.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-sol-05.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr height="99%" valign="top">
+    <td>
+    <!-- BEGIN CONTENTS -->
+
+<a name="h1_6"></a>
+<h1>Imprimiendo el precio de los productos</h1>
+<p>Se quiere modificar el sistema de pedidos de la <i>Tienda de recambios de Bob</i> para que el formulario muestre los precios de los productos a partir del contenido de un vector.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar el fichero <tt>Sites/cursophp/03-vectores/ficheros/formulario.php</tt> para que contenga una matriz asociativa <tt>$precios</tt> similar al vector <tt>$productos</tt> definido con anterioridad, pero siendo el valor de cada elemento un vector con la descripci&oacute;n del producto y el precio.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Ejemplo de un elemento del nuevo vector <tt>$precios</tt>.</p>
+<div class='source'><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br />$precios</span><span style="color: #007700">=&nbsp;array(<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">"aceite"&nbsp;</span><span style="color: #007700">=&gt;&nbsp;array(</span><span style="color: #DD0000">"desc"&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">"Lata&nbsp;de&nbsp;aceite"</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">"precio"&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">10</span><span style="color: #007700">),<br />&nbsp;&nbsp;&nbsp;...<br />&nbsp;&nbsp;&nbsp;);<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Editar el fichero <tt>formulario.php</tt> para que utilizando el vector <tt>$precios</tt> imprima al lado de cada producto el precio por unidad.</p>
+     </td>
+  </tr>
+
+</table>
+<p>El resultado deber&aacute; ser similar a la tabla que se muestra a continuaci&oacute;n.</p>
+<div class='exec'><table border="0" style="border: solid thin black; margin-left: 3em;">
+<tr bgcolor="#cccccc">
+  <td width="150">Elementos</td>
+  <td width="15">Cantidad</td>
+</tr>
+
+<tr>
+  <td style="white-space: nowrap;">Frenos (100 &euro;/ud)</td>
+  <td align="center">
+    <input type="text" name="numfrenos" size="3" maxlength="3">
+  </td>
+</tr>
+
+
+<tr>
+  <td style="white-space: nowrap;">Latas de aceite (10 &euro;/ud)</td>
+  <td align="center">
+    <input type="text" name="numaceite" size="3" maxlength="3">
+  </td>
+</tr>
+
+
+<tr>
+  <td style="white-space: nowrap;">Neum&aacute;ticos (4 &euro;/ud)</td>
+  <td align="center">
+    <input type="text" name="numruedas" size="3" maxlength="3">
+  </td>
+</tr>
+
+
+<tr>
+  <td style="white-space: nowrap;">Buj&iacute;as (2 &euro;/ud)</td>
+  <td align="center">
+    <input type="text" name="numbujias" size="3" maxlength="3">
+  </td>
+</tr>
+
+<tr>
+  <td colspan="2" align="center"><input type="submit" value="Enviar petici&oacute;n"></td>
+</tr>
+</table></div>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobar el nuevo formato del formulario ejecutando el fichero <a href="../../03-vectores/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+    <!-- END CONTENTS -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          5 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-sol-03.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-sol-05.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>

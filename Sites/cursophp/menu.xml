@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf8" ?>
+<contents id="home" name="Prácticas">
+  
+  <section id="sesiones" name="Sesiones" menu="left" >
+
+    <item name="El lenguaje PHP" id="02-lenguaje-php" >
+      <title>Sintaxis, tipos, expresiones y sentencias de control en PHP</title>
+      <desc>
+	Descripción del lenguaje de programación PHP: Sintaxis del lenguaje,
+	tipos de datos y su manejo en PHP, operadores y expresiones, y
+	estructuras de control.
+      </desc>
+    </item>
+    <item name="Estructuras de datos" id="03-vectores" >
+      <title>Estructuras de datos: los vector en PHP</title>
+      <desc>
+	Descripción y uso del tipo de datos vector. Tipos de datos no
+	escalares: vectores, matrices, listas, pilas, estructuras, etc.
+      </desc>
+    </item>
+    <item name="Módulos en PHP" id="05-modulos" >
+      <title>Descomposición modular de scripts en PHP</title>
+      <desc>
+	Programación modular en el lenguaje PHP. Estructuración de los scripts
+	PHP en múltiples ficheros.
+      </desc>
+    </item>
+    <item name="Funciones en PHP" id="06-funciones" >
+      <title>Programación mediante funciones</title>
+      <desc>
+	Uso de funciones en PHP. Funciones definidas por el usuario. Listas de
+	parámetros y parámetros opcionales.
+      </desc>
+    </item>
+    <item name="Cookies y sesiones" id="09-cookies-sesiones" >
+      <title>Almacenando información entre conexiones: ''cookies'' y sesiones</title>
+      <desc>
+	Descripción de las herramientas de almacenamiento de preferencias e
+	información temporal para la realización de aplicaciones web. Uso de
+	las cookies y las sesiones en PHP.
+      </desc>
+    </item>
+    <item name="Accediendo al servidor" id="10-accediendo-al-servidor" >
+      <title>Control de acceso al servidor y modificación de contenidos</title>
+      <desc>
+	Descripción de los mecanismos básicos para controlar y modificar los
+	contenidos del servidor web. Control de acceso, subida de ficheros al
+	servidor, examinar el sistema de ficheros del servidor, etc.
+      </desc>
+    </item>
+
+  </section>
+
+  <section id="doc" name="Documentación" menu="top" >
+
+    <item name="Manual PHP" id="manual-php" link="http://php.net/manual/es/" />
+    <item name="Funciones PHP" id="funciones-php" link="http://php.net/manual/es/indexes.functions.php" />
+    <item name="Estándar HTML" id="std-html" link="http://www.w3.org/TR/html401/cover.html" />
+    <item name="Estándar CSS" id="css-html" link="http://www.w3.org/TR/CSS21/" />
+    
+  </section>
+
+
+</contents>

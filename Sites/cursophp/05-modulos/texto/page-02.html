@@ -1,0 +1,133 @@
+
+<table width='100%'>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          3 / 5        </span>
+        <span class='pagelink'>
+          <a href="page-01.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-03.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr height="99%" valign="top">
+    <td>
+    <!-- BEGIN CONTENTS -->
+
+<a name="h1_4"></a>
+<h1>Paso de par&aacute;metros a un m&oacute;dulo</h1>
+<p>Aunque no se pueden pasar par&aacute;metrso como tales aun m&oacute;dulo, un m&oacute;dulo puede establecer en qu&eacute; variables globales espera los posibles par&aacute;metros y en qu&eacute; variables va a dejar el m&oacute;dulo los resultados.</p>
+<p>Para probar este mecanismo se va a realizar una prueba sencilla un m&oacute;dulo que espere los par&aacute;metros en un conjunto de variables globales.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar el fichero <tt>Sites/cursophp/05-modulos/ficheros/invocacion.php</tt> para que incluya al m&oacute;dulo <tt>mensaje.php</tt> y le pase el mensaje a imprimir en la variable <tt>$param</tt>. Utilizad la construcci&oacute;n <tt>include()</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar el m&oacute;dulo <tt>Sites/cursophp/05-modulos/ficheros/mensaje.php</tt> para que imprime el mensaje y devuelva como valor de retorno en la variable <tt>$resp</tt> el mensaje de entrada concatenado con la fecha actual.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobad el correcto funcionamiento del m&oacute;dulo <tt>mensaje.php</tt> ejecutando el fichero <a href="../../05-modulos/ficheros/invocacion.php" target="files"></tt>invocacion.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar el fichero <tt>invocacion.php</tt> para que imprima el mensaje de respuesta del m&oacute;dulo.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobar el correcto funcionamiento del script ejecutando el fichero <a href="../../05-modulos/ficheros/invocacion.php" target="files"></tt>invocacion.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/warning.png"></td>
+    <td width='99%'>
+      <p>Se puede comprobar que si por error alguna de las variables de entrada a un m&oacute;dulo no est&aacute;n establecidas, el programa se ejecuta igualmente.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Se quiere incorporar a continuaci&oacute;n algunas comprobaciones de seguridad sobre las existencia de los par&aacute;metros en el m&oacute;dulo <tt>mensaje.php</tt>.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>A&ntilde;adir una condici&oacute;n de seguridad que termine inmediatamente la ejecuci&oacute;n del m&oacute;dulo <tt>mensaje.php</tt> si el par&aacute;metro <tt>$param</tt> no est&aacute; establecido. Se recomienda el uso de la funci&oacute;n <tt>isset()</tt> y de la construcci&oacute;n <tt>return</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobar el correcto funcionamiento de la condici&oacute;n de seguridad modificando el script <a href="../../05-modulos/ficheros/invocacion.php" target="files"></tt>invocacion.php</tt></a> para que asigne el mensaje a la variable <tt>$par</tt> en vez de a <tt>$param</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Intentar realizar el ejercicio anterior utilizando la construcci&oacute;n <tt>require()</tt> en el fichero <a href="../../05-modulos/ficheros/invocacion.php" target="files"></tt>invocacion.php</tt></a> utilizando un nombre incorrecto para el m&oacute;dulo <tt>mensaje.php</tt> (v.g. <tt>message.php</tt>).</p>
+     </td>
+  </tr>
+
+</table>
+    <!-- END CONTENTS -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          3 / 5        </span>
+        <span class='pagelink'>
+          <a href="page-01.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-03.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>

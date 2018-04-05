@@ -1,0 +1,81 @@
+
+<table width='100%'>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          3 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-sol-01.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-sol-03.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr height="99%" valign="top">
+    <td>
+    <!-- BEGIN CONTENTS -->
+
+<a name="h1_4"></a>
+<h1>Automatizando el formulario de la tienda de Bob</h1>
+<p>Se pretende generar el formulario de petici&oacute;n de la tienda de Bob de forma autom&aacute;tica a partir del contenido de un vector de productos.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>A&ntilde;adir al fichero <tt>Sites/cursophp/03-vectores/ficheros/formulario.php</tt> un vector asociativo <tt>$productos</tt> que contenga el nombre de los productos como valores (<i>Frenos</i>, <i>Latas de aceite</i> y <i>Neum&aacute;ticos</i>) y los identificadores de dichos productos como claves (<i>frenos</i>, <i>aceite</i> y <i>ruedas</i>).</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar la tabla con los campos de entrada del formulario para que se genere mediante un bucle. Cada fila de la tabla se generar&aacute; a partir de uno de los elementos del vector <tt>$productos</tt>. Como atributo <tt>name</tt> de cada elemento <tt>input</tt> se utilizar&aacute;n las claves del vector producto concatenadas con el prefijo <tt>num</tt>: <tt>&quot;num&quot; . $clave</tt> o <tt>&quot;num$clave&quot;</tt> (v.g. <tt>numaceite</tt>).</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobar que el formulario se imprime correctamente accediendo al fichero <a href="../../03-vectores/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobar la correcci&oacute;n del ejercicio anterior a&ntilde;adiendo al vector de productos una nueva entrada: <i>bujias</i> &rArr; <i>Bujias</i>.  Comprobar que se a&ntilde;ade una nueva fila al formulario mostrado por <a href="../../03-vectores/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a> conteniendo el nuevo campo de entrada.</p>
+     </td>
+  </tr>
+
+</table>
+    <!-- END CONTENTS -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          3 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-sol-01.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-sol-03.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>

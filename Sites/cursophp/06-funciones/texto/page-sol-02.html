@@ -1,0 +1,85 @@
+
+<table width='100%'>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          3 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-sol-01.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-sol-03.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr height="99%" valign="top">
+    <td>
+    <!-- BEGIN CONTENTS -->
+
+<a name="h1_4"></a>
+<h1>Utilizando funciones para la impresi&oacute;n del pedido</h1>
+<p>Con el objetivo de organizar el manejo de peticiones de la tienda de Bob se quiere reemplazar parte del c&oacute;digo del fichero <tt>peticion.php</tt> por diversas funciones.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar el c&oacute;digo del fichero <tt>Sites/cursophp/06-funciones/ficheros/peticion.php</tt> creando una funci&oacute;n <tt>obtener_pedido($productos)</tt> que devuelva la lista de las peticiones realizadas en un vector asociativo. El vector estar&aacute; formado por los pares <i>c&oacute;digo</i> &rArr; <i>cantidad</i>, incluyendo s&oacute;lo aquellos productos en los que la cantidad solicitada sea mayor que 0. Ver el ejemplo a continuaci&oacute;n:</p>
+     </td>
+  </tr>
+
+</table>
+<div class='source'><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br />$pedido&nbsp;</span><span style="color: #007700">=&nbsp;array(<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">"frenos"&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">2</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">"aceite"&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">1</span><span style="color: #007700">,<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #DD0000">"ruedas"&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">4<br />&nbsp;&nbsp;&nbsp;</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Editar el fichero <tt>peticion.php</tt> para que la lista de peticiones realizadas la imprima una funci&oacute;n <tt>imprime_pedido($productos,$pedido)</tt>. Dicha funci&oacute;n debe recibir la tabla de productos y el vector con los pedidos obtenido en el ejercicio anterior e imprimir las peticiones en una tabla.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Tras la modificaci&oacute;n el fragmento de c&oacute;digo:</p>
+<div class='source'><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">...<br />echo&nbsp;</span><span style="color: #DD0000">"&lt;p&gt;Su&nbsp;petici&#243;n&nbsp;es&nbsp;la&nbsp;siguiente:"</span><span style="color: #007700">;<br />echo&nbsp;</span><span style="color: #DD0000">"&lt;br&gt;"</span><span style="color: #007700">;<br /><br />foreach&nbsp;(</span><span style="color: #0000BB">$productos&nbsp;</span><span style="color: #007700">as&nbsp;</span><span style="color: #0000BB">$clave&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">$valor</span><span style="color: #007700">)&nbsp;{<br />&nbsp;&nbsp;&nbsp;if&nbsp;(</span><span style="color: #0000BB">trim</span><span style="color: #007700">(</span><span style="color: #0000BB">$_POST</span><span style="color: #007700">[</span><span style="color: #DD0000">"num</span><span style="color: #0000BB">$clave</span><span style="color: #DD0000">"</span><span style="color: #007700">])&nbsp;!=&nbsp;</span><span style="color: #DD0000">""</span><span style="color: #007700">)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;echo&nbsp;</span><span style="color: #0000BB">$valor</span><span style="color: #007700">[</span><span style="color: #DD0000">"desc"</span><span style="color: #007700">]&nbsp;.&nbsp;</span><span style="color: #DD0000">":&nbsp;"&nbsp;</span><span style="color: #007700">.</span><span style="color: #0000BB">$_POST</span><span style="color: #007700">[</span><span style="color: #DD0000">"num</span><span style="color: #0000BB">$clave</span><span style="color: #DD0000">"</span><span style="color: #007700">].</span><span style="color: #DD0000">"&lt;br&gt;\n"</span><span style="color: #007700">;<br />}&nbsp;</span><span style="color: #FF8000">//&nbsp;endfor<br /></span><span style="color: #007700">...<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+<p>deber&iacute;a ser similar a:</p>
+<div class='source'><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /></span><span style="color: #007700">...<br /></span><span style="color: #0000BB">$pedido</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">obtener_pedido</span><span style="color: #007700">(</span><span style="color: #0000BB">$productos</span><span style="color: #007700">);<br /></span><span style="color: #0000BB">imprime_pedido</span><span style="color: #007700">(</span><span style="color: #0000BB">$productos</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">$pedido</span><span style="color: #007700">);<br />...<br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobad las modificaciones realizadas llevando a cabo un pedido desde <a href="../../06-funciones/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+    <!-- END CONTENTS -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          3 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-sol-01.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-sol-03.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>

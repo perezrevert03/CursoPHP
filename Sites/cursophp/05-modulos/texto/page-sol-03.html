@@ -1,0 +1,98 @@
+
+<table width='100%'>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          4 / 5        </span>
+        <span class='pagelink'>
+          <a href="page-sol-02.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-sol-04.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr height="99%" valign="top">
+    <td>
+    <!-- BEGIN CONTENTS -->
+
+<a name="h1_5"></a>
+<h1>Modularizando la tienda de Bob</h1>
+<p>Se quiere modularizar los scripts de la <i>Tienda de Bob</i> compartiendo entre los scripts <tt>formulario.php</tt> y <tt>peticion.php</tt> las estructuras de datos comunes.</p>
+<p>Partiendo de los ficheros <tt>Sites/cursophp/05-modulos/ficheros/formulario.php</tt> y <tt>Sites/cursophp/05-modulos/ficheros/peticion.php</tt> que se suministran realizar las siguientes modificaciones.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Mover la definici&oacute;n del vector <tt>$productos</tt> de los ficheros <tt>formulario.php</tt> y <tt>peticion.php</tt> al m&oacute;dulo <tt>Sites/cursophp/05-modulos/ficheros/precios.php</tt>.</p>
+<p>Incluir desde ambos ficheros al m&oacute;dulo <tt>precios.php</tt> en el punto en que anteriormente se defin&iacute;a el vector <tt>$productos</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobar que el sistema de peticiones sigue funcionando correctamente tras la modificaci&oacute;n enviando una petici&oacute;n desde <a href="../../05-modulos/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Se desea modificar el fichero <tt>formulario.php</tt> para que los campos de entrada se generen mediante la inclusion de m&oacute;dulos. Se desea sustituir el c&oacute;digo que se muestra a continuaci&oacute;n por una orden del tipo <tt>include &quot;lineapedido.php&quot;</tt>.</p>
+<div class='source'><code><span style="color: #000000">
+&lt;tr&gt;<br />&nbsp;&nbsp;&lt;td&nbsp;nowrap='nowrap'&gt;<span style="color: #0000BB">&lt;?php&nbsp;</span><span style="color: #007700">echo&nbsp;</span><span style="color: #DD0000">"</span><span style="color: #0000BB">$valor</span><span style="color: #007700">[</span><span style="color: #0000BB">desc</span><span style="color: #007700">]</span><span style="color: #DD0000">&nbsp;(</span><span style="color: #0000BB">$valor</span><span style="color: #007700">[</span><span style="color: #0000BB">precio</span><span style="color: #007700">]</span><span style="color: #DD0000">&nbsp;&amp;euro;/ud)"&nbsp;</span><span style="color: #0000BB">?&gt;</span>&lt;/td&gt;<br />&nbsp;&nbsp;&lt;td&nbsp;align="center"&gt;<br />&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type="text"&nbsp;name="num<span style="color: #0000BB">&lt;?=&nbsp;$clave&nbsp;?&gt;</span>"&nbsp;size="3"&nbsp;maxlength="3"&gt;<br />&nbsp;&nbsp;&lt;/td&gt;<br />&lt;/tr&gt;</span>
+</code></div>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Editar el fichero <tt>Sites/cursophp/05-modulos/ficheros/lineapedido.php</tt> para que muestre dicho c&oacute;digo, pero utilizando las variables de entrada: <tt>$titulo</tt> para nombre del producto, <tt>$nombre</tt> para el nombre de la variable del campo de entrda y <tt>$precio</tt> para el precio del producto.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar el bucle de impresi&oacute;n de la tabla del formulario en el fichero <tt>Sites/cursophp/05-modulos/ficheros/formulario.php</tt> para que utilice el m&oacute;dulo <tt>lineapedido.php</tt>.</p>
+<p>Recordar que los valores del las expresiones <tt>$valor[desc]</tt>, <tt>$valor[precio]</tt> y <tt>$clave</tt> deber&aacute;n asignarse a las variables <tt>$titulo</tt>, <tt>$nombre</tt> y <tt>$precio</tt> antes de incluir el m&oacute;dulo.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobar el correcto funcionaiento del sistema de peticiones enviando una petici&oacute;n desde <a href="../../05-modulos/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+    <!-- END CONTENTS -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          4 / 5        </span>
+        <span class='pagelink'>
+          <a href="page-sol-02.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-sol-04.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>

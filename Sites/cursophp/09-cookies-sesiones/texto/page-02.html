@@ -1,0 +1,106 @@
+
+<table width='100%'>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          3 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-01.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-03.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr height="99%" valign="top">
+    <td>
+    <!-- BEGIN CONTENTS -->
+
+<a name="h1_4"></a>
+<h1>Accediendo a la informaci&oacute;n almacenada en cookies</h1>
+<p>Ahora vamos a acceder a la informaci&oacute;n desde la p&aacute;gina <tt>visita.php</tt> y dar de alta un contador de visitas.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar el fichero <tt>Sites/cursophp/09-cookies-sesiones/ficheros/visita.php</tt> para que recupere la informaci&oacute;n del usuario almacenada en las <tt>cookies</tt> y se la muestre, indic&aacute;ndole la edad que tiene en estos momentos. Si la informaci&oacute;n no est&aacute; presente, debe reenviar al usuario a la p&aacute;gina de inicio autom&aacute;ticamente.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/find.png"></td>
+    <td width='99%'>
+      <p>Para forzar un salto autom&aacute;tico a la p&aacute;gina de inicio busca en Google los t&eacute;rminos <tt>php redirect header location</tt> y mira en los primeros resultados obtenidos.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobad el funcionamiento de la p&aacute;gina de visitas desde el enlace <a href="../../09-cookies-sesiones/ficheros/visita.php" target="files"></tt>visita.php</tt></a>. En caso de que la informaci&oacute;n se haya almacenado incorrectamente, corregir el <i>script</i> <tt>entrada.php</tt> y repetir el proceso de registro.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Se sugiere utilizar un c&oacute;digo como el que se muestra a continuaci&oacute;n para depurar el contenido del vector <tt>$_COOKIE</tt>.</p>
+<div class='source'><code><span style="color: #000000">
+<span style="color: #0000BB">&lt;?php<br /><br /></span><span style="color: #007700">echo&nbsp;</span><span style="color: #DD0000">"&lt;pre&gt;"</span><span style="color: #007700">;<br /></span><span style="color: #0000BB">var_dump</span><span style="color: #007700">(</span><span style="color: #0000BB">$_COOKIE</span><span style="color: #007700">);<br />echo&nbsp;</span><span style="color: #DD0000">"&lt;/pre&gt;"</span><span style="color: #007700">;<br /><br /></span><span style="color: #0000BB">?&gt;</span>
+</span>
+</code></div>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>A&ntilde;adir en el <i>script</i> <tt>visita.php</tt> una nueva <i>cookie</i> para cada usuario que nos informe de las veces que ha visitado esta p&aacute;gina.  Cada vez que un usuario acceda a la p&aacute;gina deber&aacute; incrementar el valor de la <i>cookie</i> en <tt>1</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobad el funcionamiento del <i>script</i> <a href="../../09-cookies-sesiones/ficheros/visita.php" target="files"></tt>visita.php</tt></a> y el contador de visitas, accediendo a la p&aacute;gia y forzando al navegador a realizar una recarga (tecla <tt>F5</tt>).</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Poner a la cookie del contador una fecha de caducidad de 1 minuto y  comprobar su funcionamiento.</p>
+     </td>
+  </tr>
+
+</table>
+    <!-- END CONTENTS -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          3 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-01.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>
+          <a href="page-03.html">[&rArr;]</a>
+        </span>
+      </div>
+    </td>
+  </tr>
+</table>

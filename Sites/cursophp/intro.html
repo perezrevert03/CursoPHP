@@ -1,0 +1,41 @@
+
+<a name="h1_1"></a>
+<h1>Introducci&oacute;n</h1>
+<p>El entorno de trabajo que vamos a utilizar durante las sesiones pr&aacute;cticas est&aacute; formado por los siguientes componentes:</p>
+<ul>
+  <li>Sistema operativo: GNU/Linux. Distribuci&oacute;n Ubuntu (14.04).</li>
+  <li>Entorno gr&aacute;fico: Gnome.</li>
+  <li>Servidor web: Apache (2.4)</li>
+  <li>Servidor de bases de datos: MySQL (5.5).</li>
+  <li>PHP versi&oacute;n 5.5</li>
+</ul>
+<p>Algunos de estos componentes no son indispensables para el desarrollo de p&aacute;ginas web mediante PHP, pero son los que se van a utilizar durante este curso.</p>
+<p>El sistema operativo Linux es un sistema multitarea multiusuario, por lo que, antes de comenzar a trabajar, hay que darse de alta en el sistema. El usuario que se ha creado para la realizaci&oacute;n del curso se denomina <tt>alumno</tt> y la clave utilizada es <tt>cursophp</tt>.</p>
+
+<a name="h2_1_1"></a>
+<h2>Editores</h2>
+<p>Para editar los ficheros PHP, que son ficheros de texto normales, como los ficheros HTML, se pueden utilizar cualquier editor disponible en el sistema.  Para acceder a ellos, o se teclea el comando en una consola del entorno gr&aacute;fico, como puede ser <tt>gedit</tt> o <tt>geany</tt> (recomendado), o se utiliza el men&uacute; principal de GNOME Classic: <i>Aplicaciones &rarr; Accesorios &rarr; Editor de textos</i>, <i>Aplicaciones &rarr; Programaci&oacute;n &rarr; Geany</i>, etc.</p>
+<p>En la barra de acceso r&aacute;pido se han colocado las aplicaciones m&aacute;s habituales, como el navegador de internet (<tt>firefox</tt>), el explorador de ficheros (<tt>nautilus</tt>), el editor <tt>geany</tt> y el terminal con el interprete de ordenes.</p>
+
+<a name="h2_1_2"></a>
+<h2>Estructura de directorios</h2>
+<p>Para que los ficheros generados sean accesibles por el servidor web se colocan en un directorio especifico. En la actual instalacion ese directorio es <tt>Sites/cursophp</tt>, debe encontrarse en el directorio <tt>HOME</tt> del usuario y tener permisos de lectura para todos los usuarios del sistema (en concreto para el servidor apache).</p>
+<pre class='code'>
+drwxr-xr-x   15 alumno    alumno        4096 Sep  2 16:50 Sites/cursophp</pre>
+<p>Para la realizaci&oacute;n de cada sesi&oacute;n pr&aacute;ctica crearemos un directorio que contendr&aacute; los ficheros correspondientes a dicha sesi&oacute;n. A este directorio lo denominaremos directorio de trabajo. Los directorios se crear&aacute;n dentro del directorio <tt>Sites/cursophp</tt>.</p>
+<p>As&iacute; pues, para esta sesi&oacute;n pr&aacute;ctica crearemos un directorio que se denominar&aacute; <tt>02-lengueje-php</tt>. Utilizar para ello la orden <tt>mkdir</tt> o el gestor de ficheros de GNOME: <i>Lugares &rarr; Carpeta personal</i>.</p>
+
+<a name="h2_1_3"></a>
+<h2>Navegador web</h2>
+<p>Para comprobar el correcto funcionamiento de las pruebas realizadas se utilizar&aacute; uno de los navegadores disponibles: mozilla, netscape, konqueror, etc. Estos navegadores deber&iacute;an estar disponibles en el men&uacute; <i>Aplicaciones &rarr; Internet</i>.</p>
+<p>Para visualizar los ficheros web de nuestro usuario se utilizar&aacute; la URL: <a href="http://cursophp.local/">http://cursophp.local/</a>.</p>
+
+<a name="h1_2"></a>
+<h1>Documentaci&oacute;n</h1>
+<p>Toda la documentaci&oacute;n necesaria para la realizaci&oacute;n del curso estar&aacute; disponible a lo largo del curso en la direcci&oacute;n <a href="http://cursophp.disca.upv.es/">http://cursophp.disca.upv.es/</a>. Adem&aacute;s de las transparencias, boletines de las sesiones pr&aacute;cticas y alg&uacute;n material adicional, en esta direcci&oacute;n encontrar&eacute;is disponible importante documentaci&oacute;n en l&iacute;nea.</p>
+<p>PHP, al igual que otros lenguajes de script, ofrece multitud de funciones para acceder a la amplia gama de servicios a los que permite acceder. Es pr&aacute;ctica habitual y recomendable en estos casos, el tener constantemente un navegador apuntando a la documentaci&oacute;n en l&iacute;nea que oferce el lenguaje PHP, tanto para consultar dudas, como para buscar ejemplos, funciones nuevas, etc. En la p&aacute;gina web del curso est&aacute;n disponibles distintas versiones de dicha documentaci&oacute;n. Se recomienda <i>encarecidamente</i> que se utilice la documentaci&oacute;n disponible sobre PHP.</p>
+<p>Para la visualizaci&oacute;n de la documentaci&oacute;n que se encuentra en PDF se puede utilizar el visor <tt>evince</tt> o <tt>xpdf</tt>.</p>
+
+<a name="h1_3"></a>
+<h1>Ficheros de ayuda</h1>
+<p>Algunas sesiones pr&aacute;cticas dispondr&aacute;n de ficheros de ayuda (esqueletos o ejemplos) para su realizaci&oacute;n. Estos ficheros estar&aacute;n disponibles en la p&aacute;gina web del curso. Los ficheros de ayuda estar&aacute;n enpaquetados con la utilidad <tt>tar</tt>. Para descomprimirlos se puede utilizar la orden <tt>tar xvzf fichero.tgz</tt>. Si est&aacute; orden se ejecuta sobre el directorio <tt>${HOME}/Sites/cursophp</tt> la descompresi&oacute;n del fichero generar&aacute; autom&aacute;ticamente el directorio de trabajo.</p>

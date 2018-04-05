@@ -1,0 +1,109 @@
+
+<table width='100%'>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          6 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-sol-04.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>[#]</span>
+      </div>
+    </td>
+  </tr>
+  <tr height="99%" valign="top">
+    <td>
+    <!-- BEGIN CONTENTS -->
+
+<a name="h1_7"></a>
+<h1>Automatizando el c&aacute;lculo del coste del pedido</h1>
+<p>Finalmente se quiere modificar el sistema de procesamiento de peticiones para que calcule el coste del pedido a partir del contenido del vector <tt>$precios</tt> y el vector <tt>$_POST</tt>.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Copiar la definici&oacute;n del vector <tt>$precios</tt> realizada en el fichero <tt>formulario.php</tt> al fichero <tt>peticion.php</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar la impresi&oacute;n del pedido realizada en el fichero <tt>Sites/cursophp/03-vectores/ficheros/peticion.php</tt>] para que utilice el nuevo vector <tt>$precios</tt> en lugar del antiguo vector <tt>$productos</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobar que el comporatamiento sigue siendo el esperado tras enviarle una petici&oacute;n desde el fichero <a href="../../03-vectores/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Falta s&oacute;lo modificar el sistema de peticiones para que el c&aacute;lculo de los costes del pedido los realice con la ayuda del vector <tt>$precios</tt> mediante un bucle.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>Modificar el fichero <tt>peticion.php</tt> para que el c&aacute;lculo de los totales se genere autom&aacute;ticamente a partir del vector <tt>$precios</tt>. Para acceder al valor de los campos del formulario se utilizar&aacute; el vector <tt>$_POST</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Comprobad que el nuevo procesamiento de pedidos funciona correctamente realizando un nuevo pedido desde <a href="../../03-vectores/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a>.</p>
+     </td>
+  </tr>
+
+</table>
+<p>Para comprobar que la modificaci&oacute;n que se ha llevado a cabo es correcta vamos a a&ntilde;adir un nuevo elemento al vector de precios y comprobar que todo funciona correctamente.</p>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/edit.png"></td>
+    <td width='99%'>
+      <p>A&ntilde;adir al vector <tt>$precios</tt> una nueva entrada: <i>bujias</i> &rArr; <i>Bujias</i> con precio 7 &euro; en ambos ficheros: <tt>formulario.php</tt> y <tt>peticion.php</tt>.</p>
+     </td>
+  </tr>
+
+</table>
+
+<table class='box'>
+  <tr valign='top'>
+    <td><img src="../../images/icons/run.png"></td>
+    <td width='99%'>
+      <p>Realizar un nuevo pedido desde <a href="../../03-vectores/ficheros/formulario.php" target="files"></tt>formulario.php</tt></a> que incluya el nuevo producto para comprobar que el procesamiento de pedidos funciona correctamente.</p>
+     </td>
+  </tr>
+
+</table>
+    <!-- END CONTENTS -->
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class='pagebar'>
+        <span class='pageindex'>
+          6 / 6        </span>
+        <span class='pagelink'>
+          <a href="page-sol-04.html">[&lArr;]</a>
+        </span>
+        <span class='pagelink'>[#]</span>
+      </div>
+    </td>
+  </tr>
+</table>
